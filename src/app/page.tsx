@@ -11,7 +11,8 @@ export default function Home() {
 
         <div className={styles.navLinks}>
           <a href="#about">About</a>
-          <a href="#skill">Skills</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </div>
@@ -92,8 +93,68 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="experience" className={styles.section}>
+        <p className={styles.sectionLabel}>03 — EXPERIENCE</p>
+
+        <h2>Where I've worked.</h2>
+
+        <div className={styles.experience}>
+          {profile.experience.map((experience) => (
+            <article
+              className={styles.experienceItem}
+              key={`${experience.company}-${experience.role}`}
+            >
+              <div className={styles.experienceHeader}>
+                <div>
+                  <h3>{experience.role}</h3>
+                  <p>{experience.company}</p>
+                </div>
+
+                <span>{experience.period}</span>
+              </div>
+
+              <p className={styles.experienceLocation}>
+                {experience.location}
+              </p>
+
+              <p className={styles.experienceDescription}>
+                {experience.description}
+              </p>
+
+              <div className={styles.experienceTechnologies}>
+                {experience.technologies.map((technology, index) => (
+                  <span key={technology}>{index > 0 && " · "}{technology}</span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="education" className={styles.section}>
+        <p className={styles.sectionLabel}>04 — EDUCATION</p>
+
+        <h2>Academic foundation.</h2>
+
+        <div className={styles.education}>
+          <div className={styles.educationHeader}>
+            <div>
+              <h3>{profile.education.degree}</h3>
+              <p>{profile.education.school}</p>
+            </div>
+
+            <span>{profile.education.period}</span>
+          </div>
+
+          <div className={styles.educationMeta}>
+            <span>GPA</span>
+            <strong>{profile.education.gpa}</strong>
+          </div>
+        </div>
+      </section>
+
       <section id="projects" className={styles.section}>
-        <p className={styles.sectionLabel}>03 — PROJECTS</p>
+        <p className={styles.sectionLabel}>05 — PROJECTS</p>
 
         <h2>Selected work.</h2>
 
@@ -105,7 +166,7 @@ export default function Home() {
       </section>
 
       <section id="contact" className={styles.section}>
-        <p className={styles.sectionLabel}>04 — CONTACT</p>
+        <p className={styles.sectionLabel}>06 — CONTACT</p>
 
         <h2>Let's build something.</h2>
 

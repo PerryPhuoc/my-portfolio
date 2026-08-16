@@ -183,6 +183,89 @@
   font-size: 12px;
 }
 
+.experience {
+  margin-top: 48px;
+}
+
+.experienceItem {
+  padding: 40px 0;
+  border-top: 1px solid #ddd;
+}
+
+.experienceItem:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+.experienceHeader,
+.educationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.experienceHeader h3,
+.educationHeader h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.experienceHeader p,
+.educationHeader p {
+  margin: 8px 0 0;
+  opacity: 0.6;
+}
+
+.experienceHeader>span,
+.educationHeader>span {
+  white-space: nowrap;
+  font-size: 13px;
+  opacity: 0.5;
+}
+
+.experienceLocation {
+  margin: 24px 0 0;
+  font-size: 13px;
+  opacity: 0.5;
+}
+
+.experienceDescription {
+  max-width: 700px;
+  margin: 20px 0 0;
+  line-height: 1.7;
+  opacity: 0.7;
+}
+
+.experienceTechnologies {
+  margin-top: 24px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.education {
+  margin-top: 48px;
+  padding: 40px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.educationMeta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.educationMeta span {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.educationMeta strong {
+  font-size: 14px;
+}
+
 @media (max-width: 700px) {
   .page {
     padding: 0 20px;
@@ -211,5 +294,16 @@
 
   .profileMeta {
     grid-template-columns: 1fr;
+  }
+
+  .experienceHeader,
+  .educationHeader {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .experienceHeader>span,
+  .educationHeader>span {
+    white-space: normal;
   }
 }
