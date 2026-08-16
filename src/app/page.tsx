@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
+import { profile } from "@/data/profile";
 
 export default function Home() {
   return (
@@ -48,13 +49,26 @@ export default function Home() {
       <section id="about" className={styles.section}>
         <p className={styles.sectionLabel}>01 — ABOUT</p>
 
-        <h2>Building from the backend up.</h2>
+        <h2>{profile.title}</h2>
 
-        <p>
-          My foundation is built around backend development, databases, and
-          software engineering, with fullstack experience across React,
-          .NET, Spring Boot, Node.js, and multiple database systems.
-        </p>
+        <p>{profile.summary}</p>
+
+        <div className={styles.profileMeta}>
+          <div>
+            <span>Location</span>
+            <strong>{profile.location}</strong>
+          </div>
+
+          <div>
+            <span>Education</span>
+            <strong>{profile.education.school}</strong>
+          </div>
+
+          <div>
+            <span>GPA</span>
+            <strong>{profile.education.gpa}</strong>
+          </div>
+        </div>
       </section>
 
       <section id="projects" className={styles.section}>
