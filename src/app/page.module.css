@@ -29,17 +29,6 @@
   opacity: 1;
 }
 
-.logo {
-  position: fixed;
-  top: 24px;
-  left: 24px;
-  z-index: 1000;
-
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-}
-
 .hero {
   min-height: 680px;
   display: flex;

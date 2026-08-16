@@ -2,12 +2,13 @@ import styles from "./page.module.css";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
 import { profile } from "@/data/profile";
+import Logo from "@/components/Logo";
 
 export default function Home() {
   return (
     <main className={styles.page}>
       <nav className={styles.nav}>
-        <span className={styles.logo}>PVP.</span>
+        <Logo />
 
         <div className={styles.navLinks}>
           <a href="#about">About</a>
