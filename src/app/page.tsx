@@ -11,7 +11,7 @@ export default function Home() {
 
         <div className={styles.navLinks}>
           <a href="#about">About</a>
-          <a href="#skill">Skill</a>
+          <a href="#skill">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </div>
