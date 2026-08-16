@@ -1,4 +1,6 @@
 import styles from "./page.module.css";
+import ProjectCard from "@/components/ProjectCard";
+import { projects } from "@/data/projects";
 
 export default function Home() {
   return (
@@ -60,7 +62,11 @@ export default function Home() {
 
         <h2>Selected work.</h2>
 
-        <p>Projects will be added here next.</p>
+        <div className={styles.projects}>
+          {projects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </div>
       </section>
 
       <section id="contact" className={styles.section}>
