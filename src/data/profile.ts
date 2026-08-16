@@ -9,7 +9,7 @@ export const profile = {
     location: "Ho Chi Minh City, Vietnam",
 
     summary:
-    "IT student with a strong foundation in backend development, databases, and fullstack web application development. Experienced with .NET, Java, Node.js, React, and SQL-based systems.",
+    "Full-stack software engineer specializing in backend systems (.NET, Java, Node.js) and database management, with proven experience building robust web applications.",
 
     education: {
     school: "Ho Chi Minh City University of Technology",
