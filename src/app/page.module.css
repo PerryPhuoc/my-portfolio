@@ -8,7 +8,7 @@
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 24px 0;
 }
 
@@ -30,8 +30,14 @@
 }
 
 .logo {
-  font-size: 20px;
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 1000;
+
+  font-size: 24px;
   font-weight: 700;
+  letter-spacing: -0.04em;
 }
 
 .hero {
@@ -100,13 +106,32 @@
 }
 
 .section {
-  padding: 120px 0;
+  padding: 50px 0;
   max-width: 700px;
 }
 
 .sectionLabel {
-  margin-bottom: 24px;
+  position: relative;
+  display: inline-block;
+
+  margin: 0 0 24px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
   opacity: 0.5;
+}
+
+.sectionLabel::after {
+  content: "";
+  display: block;
+
+  width: 50px;
+  height: 5px;
+
+  margin-top: 8px;
+
+  background: currentColor;
 }
 
 .section h2 {
@@ -277,6 +302,11 @@
     padding: 0 20px;
   }
 
+  .logo {
+    top: 20px;
+    left: 20px;
+  }
+
   .nav {
     align-items: flex-start;
   }
@@ -296,7 +326,7 @@
   }
 
   .section {
-    padding: 80px 0;
+    padding: 20px 0;
   }
 
   .section h2 {
