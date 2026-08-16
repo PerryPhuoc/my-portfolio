@@ -152,6 +152,37 @@
   font-weight: 500;
 }
 
+.skills {
+  margin-top: 48px;
+}
+
+.skillGroup {
+  padding: 28px 0;
+  border-top: 1px solid #ddd;
+}
+
+.skillGroup:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+.skillGroup h3 {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skillList span {
+  padding: 7px 11px;
+  border: 1px solid #ddd;
+  font-size: 12px;
+}
+
 @media (max-width: 700px) {
   .page {
     padding: 0 20px;

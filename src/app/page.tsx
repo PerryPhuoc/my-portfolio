@@ -11,6 +11,7 @@ export default function Home() {
 
         <div className={styles.navLinks}>
           <a href="#about">About</a>
+          <a href="#skill">Skill</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </div>
@@ -71,8 +72,28 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="skills" className={styles.section}>
+        <p className={styles.sectionLabel}>02 — SKILLS</p>
+
+        <h2>Technical foundation.</h2>
+
+        <div className={styles.skills}>
+          {profile.skills.map((group) => (
+            <div className={styles.skillGroup} key={group.category}>
+              <h3>{group.category}</h3>
+
+              <div className={styles.skillList}>
+                {group.skills.map((skill) => (
+                  <span key={skill}>{skill}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section id="projects" className={styles.section}>
-        <p className={styles.sectionLabel}>02 — PROJECTS</p>
+        <p className={styles.sectionLabel}>03 — PROJECTS</p>
 
         <h2>Selected work.</h2>
 
@@ -84,7 +105,7 @@ export default function Home() {
       </section>
 
       <section id="contact" className={styles.section}>
-        <p className={styles.sectionLabel}>03 — CONTACT</p>
+        <p className={styles.sectionLabel}>04 — CONTACT</p>
 
         <h2>Let's build something.</h2>
 
